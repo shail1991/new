@@ -6,12 +6,12 @@ node{
    def mvnhome = tool name: 'maven-3', type: 'maven'
    sh "${mvnhome}/bin/mvn package"
   }
-  stage ('Email notifaction'){
+  /* stage ('Email notifaction'){
      mail bcc: '', body: '''HI welcome to jenkins email alerts 
 
 Thanks 
 Shailendra''', cc: '', from: '', replyTo: '', subject: 'Jenkins jobs', to: 'shailendra.kalal@gmail.com'
   
-  }
+  }*/
   
 }
