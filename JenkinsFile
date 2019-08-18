@@ -14,4 +14,8 @@ Shailendra''', cc: '', from: '', replyTo: '', subject: 'Jenkins jobs', to: 'shai
   
   }*/
   
+  stage ('slack notifaction'){
+  slackSend channel: 'demo', color: 'good', message: 'welcome to slack notifacation', teamDomain: 'kalalworkspace.slack.com', tokenCredentialId: 'slack demo'
+  }
+  
 }
