@@ -16,7 +16,7 @@ Shailendra''', cc: '', from: '', replyTo: '', subject: 'Jenkins jobs', to: 'shai
   
   stage ('deploy to Tomcat'){
     sshagent(['tomcat']) {
-    sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@172.31.23.83:/opt/apache-tomcat-8.5.43/webapps
+    sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@172.31.23.83:/opt/apache-tomcat-8.5.43/webapps/'
 }
 }
   
