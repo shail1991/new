@@ -14,6 +14,12 @@ Shailendra''', cc: '', from: '', replyTo: '', subject: 'Jenkins jobs', to: 'shai
   
   }*/
   
+  stage ('deploy to Tomcat'){
+    sshagent(['tomcat']) {
+    sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@172.31.23.83:/opt/apache-tomcat-8.5.43/webapps
+}
+}
+  
   stage ('slack notifaction'){
   slackSend baseUrl: 'https://hooks.slack.com/services/', channel: 'jenkins', color: 'good', message: 'job notification', teamDomain: 'kalal', tokenCredentialId: 'demo-jerkins', username: 'kalal'
   
