@@ -41,6 +41,11 @@
 		</repository>
   	</distributionManagement>
 	
+	<scm>    <connection>scm:git:http://${GIT_USERNAME}:${GIT_PASSWORD}@https://github.com/shail1991/new.git</connection>
+  <url>https://github.com/shail1991/new</url>
+  <tag>HEAD</tag>
+ </scm>
+	
 <build>
     <plugins>
         <plugin>
