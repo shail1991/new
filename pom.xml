@@ -41,9 +41,15 @@
 		</repository>
   	</distributionManagement>
 	
-	<scm>    <connection>scm:git:http://${GIT_USERNAME}:${GIT_PASSWORD}@https://github.com/shail1991/new.git</connection>
-  <url>https://github.com/shail1991/new</url>
- </scm>
+	<plugin>
+     <groupId>org.apache.maven.plugins</groupId>
+     <artifactId>maven-release-plugin</artifactId>
+     <version>2.5.3</version>
+     <configuration>
+         <localCheckout>true</localCheckout>
+         <pushChanges>false</pushChanges>
+     </configuration>
+ </plugin>
 	
 <build>
     <plugins>
